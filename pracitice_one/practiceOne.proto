@@ -1,0 +1,60 @@
+/* 
+Date 
+    (number(year)
+    number(month)
+    number(day))
+Latitude 
+    Latitude (number) 
+    Longitude(number)
+Money
+    Currency Code (string)
+    Integral amount (number)
+    Decimal amount (number) 
+DayOfWeek
+Person
+    First Name
+    List of middle names
+    Last Name             */
+
+syntax ="proto3";
+
+message Date {
+    // Year of date. 0 if specifying a date without a year
+    int32 year =1;
+    // Month of date. from 1 to 12
+    int32 month =2;
+    // Day of month. from 1 to 31
+    int32 day = 3;
+}
+
+message LatLng{
+    // The latitude in degress. between [-90.0. +90.0]
+    double latitude = 1;
+    // The longitude in degress. between [-180.0, +180.0]
+    double longitude = 2;
+}
+
+message Money {
+    // The 3-letter currency code defined in ISO 4217
+    string currencyCode =1 ;
+    
+    int64 amount =2;
+    float amountDecimal =3;
+}
+enum DayOfWeek {
+    UNKNOW_DAY_OF_WEEK = 0;
+    SUNDAY = 1;
+    MONDAY = 2;
+    TUESDAY = 3;
+    WEDNESDAY =4;
+    THURSDAY = 5;
+    FRIDAY = 6;
+    SATURDAY = 7;
+}
+
+message Person {
+    string firstName =1;
+    repeated string middleName = 2;
+    string lastName = 3;
+
+}

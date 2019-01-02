@@ -1,0 +1,12 @@
+syntax = "proto3";
+
+package my.date;
+
+message Date {
+    // Year of date. 0 if specifying a date without a year
+    int32 year =1;
+    // Month of date. from 1 to 12
+    int32 month =2;
+    // Day of month. from 1 to 31
+    int32 day = 3;
+}

@@ -1,0 +1,17 @@
+/* Message to create
+int32 (age)
+string (firstName)
+string (lastName)
+bytes (small picutre)
+bool (profile verified)
+float (height) */
+
+syntax = "proto3";
+message Person{
+    int32 age = 1;
+    string firstName = 2;
+    string lastName = 3;
+    bytes smallPicture = 4;
+    bool isProfileVerified = 5;
+    float height = 6;
+}
